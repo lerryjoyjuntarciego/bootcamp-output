@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0" />
+    <title>Leg 1 : Portfolio</title>
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- GOOGLE FONTS -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="nav">
+      <div class="nav_body">
+        <a class="brand_name" href="">Lerry🤍</a>
+
+        <i id="menu_icon" class="bx bx-menu"></i>
+
+        <ul class="nav_menu">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home">
+      <div class="home_body">
+        <div class="welcome">
+          <h1>I'm Lerry Joy</h1>
+          <h3>Front-End Developer</h3>
+          
+          <p>
+            "Black is modest and arrogant at the same time. Black is lazy and easy-but mysterious.
+            But above aal  , black says this: I don't bother you-don't bother me."
+          </p>
+        </div>
+
+        <img src="image/lj.jpg" alt="Profile Picture" />
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <!-- 1.Education Background 2. Technical Skills -->
+    <section id="about">
+      <h1>ABOUT</h1>
+      <h2>
+        <u>EDUCATIONAL BACKGROUND</u>
+      </h2>
+      <div class="background">
+        <h3>
+          Elementary: Daragan Elementary School <br />High School: Buenavista
+          National High School <br />Senior High School: Buenavista National
+          High School <br />College: Guimaras State University
+        </h3>
+      </div>
+      <br />
+      <br />
+      <div class="technical">
+        <h2>
+          <u>TECHNICAL SKILLS</u>
+        </h2>
+        <h3>
+          •Programming <br />•Database Management <br />•UI/UX Design <br />•Web
+          and Mobile App Development <br />•HTML
+        </h3>
+      </div>
+      unpkg.com Lerry Joy Lerry Joy Juntarciego
+      <br />
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="image/" style="width: 25%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="image/leri.jpg" style="width: 25%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="image/ljjj.jpg" style="width: 25%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 5</div>
+          <img src="image/lerry.jpg" style="width: 25%" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 5</div>
+          <img src="image/cal.jpg" style="width: 25%" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <!-- 1.Email address 2.Contact 3.Address -->
+    <section id="contact">
+      <h1>CONTACT</h1>
+      <div class="row">
+        <div class="column">
+          <img src="image/leri.jpg" width="100%" />
+        </div>
+        <div class="column">
+          <img src="image/lerry.jpg" width="100%" />
+        </div>
+        <div class="column">
+          <img src="image/ler.jpg" width="100%" />
+        </div>
+      </div>
+
+      <h2>
+        <br />
+        <i class="bx bxs-envelope"></i>
+        Email Address: lerryjoyjuntarciego@gmail.com
+        <br />
+        <br /><i class="bx bxs-phone"></i>
+        Contact: 09302945700
+        <br />
+        <br /><i class="bx bxs-home"></i>Address: Daragan, Buenavista, Guimaras
+      </h2>
+    </section>
+
+    <!-- FOOTER -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
